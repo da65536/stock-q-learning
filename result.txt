@@ -1,0 +1,127 @@
+<main_multiplePairTT.ipynb>
+
+action_level = 3
+init_invest = 10000
+
+last_rwd_func = reward
+work_rwd_func = benefit_reward ## for updating w
+avg_point_rwd_func = my_reward
+
+feature_5 = feature_5_conti
+feature_6 = feature_6_dis
+f9version = 3
+choose_feature = [False, False, False, False, False, True, True, False, True, True]
+
+init_w = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]      
+tmp_w = [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+
+ita = 0.0035
+epsilon = 0.15
+gamma = 0.25
+
+fx_num = 5
+max_lookback = 14
+
+ratio_num_local = 5
+trial_range = 50
+
+train_size = 12 # in month
+test_size = 1 # in month
+# YET auto
+tt_count = math.floor((12*5 - train_size - test_size) / test_size) - 1  # num of trainset-testset pairs
+
+# each dataset has to have the same data renge by now
+inputFolderFormat = "./input/{0}"
+inputCsvList = ['0050.TW.csv', '1216.TW.csv', '1301.TW.csv', '2002.TW.csv', '2330.TW.csv', '2409.TW.csv', '2454.TW.csv',
+         '1704.TW.csv']
+	
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [1880.88578023]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9651.46306815]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [3596.30682445]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [-1127.42887101]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [7328.85200652]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [1905.00023977]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3162.14658627]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [10431.8437888]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [2005.55822183]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [10180.89224708]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2532.90335598]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [735.15615607]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [7624.92559564]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [2461.23386883]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-2594.26777619]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [7031.25307265]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [1698.6941772]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9736.43969638]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [1726.6352065]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [254.57318641]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [5007.85228453]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [-2082.4453369]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3588.18967641]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [7152.82363855]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [2251.92278513]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [13833.77378735]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2862.94554136]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [1338.91692612]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [5778.63350578]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [-872.90655939]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3550.94964164]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [3893.39237505]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [809.44347452]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [12266.16902952]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2045.10313851]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [1455.49890916]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [6216.16992592]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [-447.17298815]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-2678.19548247]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [4734.01741725]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [2265.78523367]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9464.59118264]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2480.55185294]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [-742.14165425]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [5146.24143439]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [3184.59029583]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3139.0402828]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [6257.02125944]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [1494.42914414]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9152.40658971]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2490.19485803]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [270.33050566]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [5804.70065919]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [1601.13692522]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3651.30438762]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [7795.51254413]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [1662.26763485]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9213.32379046]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [230.12965951]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [1341.34017697]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [7310.77778913]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [-748.79088003]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-2622.64033463]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [16387.14536898]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [2253.36966577]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9274.26792837]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [1699.1392398]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [1183.40811346]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [7113.48016681]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [513.54085881]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-3961.77447515]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [8141.11566184]
+--------------------------------------------------------------------------
+resource_data =  0050.TW.csv test_gain[tt_ind] =  [929.82752574]
+resource_data =  1216.TW.csv test_gain[tt_ind] =  [9246.45338929]
+resource_data =  1301.TW.csv test_gain[tt_ind] =  [2713.55623121]
+resource_data =  2002.TW.csv test_gain[tt_ind] =  [371.65570763]
+resource_data =  2330.TW.csv test_gain[tt_ind] =  [6520.83735817]
+resource_data =  2409.TW.csv test_gain[tt_ind] =  [1747.91761256]
+resource_data =  2454.TW.csv test_gain[tt_ind] =  [-1328.63907777]
+resource_data =  1704.TW.csv test_gain[tt_ind] =  [3799.35021407]
+--------------------------------------------------------------------------
